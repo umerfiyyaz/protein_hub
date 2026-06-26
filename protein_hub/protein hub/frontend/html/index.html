@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Protein Hub – Premium Peanut Butter</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="nav__logo">
+        <div class="logo-icon">🥜</div>
+        <span class="logo-text">Protein<span class="logo-accent">Hub</span></span>
+      </div>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#products" class="nav__link">Products</a></li>
+        <li><a href="#billboard" class="nav__link">Offers</a></li>
+        <li><a href="contact.html" class="nav__link">Contact Us</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="login.html" class="btn btn--outline">Login</a>
+        <a href="signup.html" class="btn btn--primary">Sign Up</a>
+        <div class="cart-icon" id="cartIcon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </div>
+      </div>
+      <button class="nav__toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero__bg-circles">
+      <div class="circle circle--1"></div>
+      <div class="circle circle--2"></div>
+      <div class="circle circle--3"></div>
+    </div>
+    <div class="container hero__content">
+      <div class="hero__text">
+        <span class="hero__badge">🏆 #1 Protein Peanut Butter Brand</span>
+        <h1 class="hero__title">Fuel Your <span class="highlight">Gains</span><br/>With Every Spoon</h1>
+        <p class="hero__desc">High-protein, all-natural peanut butter crafted for athletes and fitness lovers. No added sugar. No compromises.</p>
+        <div class="hero__cta">
+          <a href="#products" class="btn btn--primary btn--lg">Shop Now</a>
+          <a href="#billboard" class="btn btn--ghost btn--lg">See Offers</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat"><span class="stat__num">28g</span><span class="stat__label">Protein/Serving</span></div>
+          <div class="stat__divider"></div>
+          <div class="stat"><span class="stat__num">100%</span><span class="stat__label">Natural</span></div>
+          <div class="stat__divider"></div>
+          <div class="stat"><span class="stat__num">5K+</span><span class="stat__label">Happy Customers</span></div>
+        </div>
+      </div>
+      <div class="hero__image">
+        <div class="product-showcase">
+          <div class="jar-visual">
+            <div class="jar-body">
+              <div class="jar-label">
+                <div class="jar-logo">🥜 Protein Hub</div>
+                <div class="jar-name">CLASSIC<br/>CRUNCH</div>
+                <div class="jar-protein">28g Protein</div>
+              </div>
+            </div>
+            <div class="jar-lid"></div>
+          </div>
+          <div class="floating-badges">
+            <div class="badge badge--keto">Keto Friendly</div>
+            <div class="badge badge--protein">High Protein</div>
+            <div class="badge badge--vegan">Vegan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BILLBOARD / OFFERS SECTION -->
+  <section class="billboard" id="billboard">
+    <div class="container">
+      <div class="billboard__grid">
+        <div class="billboard__main">
+          <span class="bill-tag">🔥 Limited Time</span>
+          <h2 class="bill-title">Buy 2 Get 1 <span class="bill-accent">FREE!</span></h2>
+          <p class="bill-desc">Stock up on your favorite peanut butter. Add any 3 jars and the cheapest one is on us!</p>
+          <div class="bill-timer" id="billTimer">
+            <div class="timer-block"><span id="hours">12</span><label>Hours</label></div>
+            <div class="timer-block"><span id="minutes">34</span><label>Mins</label></div>
+            <div class="timer-block"><span id="seconds">56</span><label>Secs</label></div>
+          </div>
+          <a href="#products" class="btn btn--primary btn--lg">Grab the Deal</a>
+        </div>
+        <div class="billboard__cards">
+          <div class="promo-card promo-card--yellow">
+            <div class="promo-icon">📦</div>
+            <h3>Free Shipping</h3>
+            <p>On orders above Rs. 2,000</p>
+          </div>
+          <div class="promo-card promo-card--dark">
+            <div class="promo-icon">💪</div>
+            <h3>Gym Pack</h3>
+            <p>Bundle of 4 for Rs. 3,500</p>
+          </div>
+          <div class="promo-card promo-card--brown">
+            <div class="promo-icon">🎁</div>
+            <h3>Gift Sets</h3>
+            <p>Starting from Rs. 1,200</p>
+          </div>
+          <div class="promo-card promo-card--outline">
+            <div class="promo-icon">🔄</div>
+            <h3>Subscribe & Save</h3>
+            <p>15% off every month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Products</span>
+        <h2 class="section-title">Find Your <span class="highlight">Perfect</span> Butter</h2>
+        <p class="section-desc">Each variety is crafted for a specific goal — taste, performance, or both.</p>
+      </div>
+      <div class="products__filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="classic">Classic</button>
+        <button class="filter-btn" data-filter="whey">With Whey</button>
+        <button class="filter-btn" data-filter="flavoured">Flavoured</button>
+      </div>
+      <div class="products__grid" id="productsGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US SECTION -->
+  <section class="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why Protein Hub</span>
+        <h2 class="section-title">The <span class="highlight">Difference</span> Is Real</h2>
+      </div>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-icon">🥜</div>
+          <h3>Real Peanuts Only</h3>
+          <p>Made from 100% roasted peanuts. No fillers, no artificial flavors.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💪</div>
+          <h3>High Protein</h3>
+          <p>Up to 28g of protein per serving to support your fitness goals.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌱</div>
+          <h3>All Natural</h3>
+          <p>No palm oil, no hydrogenated fats. Clean label, clean conscience.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast Delivery</h3>
+          <p>Same-day dispatch. Your protein fix arrives fast, always.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Reviews</span>
+        <h2 class="section-title">What Our <span class="highlight">Athletes</span> Say</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Best peanut butter I've ever had. The crunch variety is absolutely addictive and the protein content is insane!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AK</div>
+            <div><strong>Ahmad Khan</strong><span>Bodybuilder, Lahore</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"I add it to my morning smoothie every day. Tastes great and keeps me full for hours. Highly recommend!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SR</div>
+            <div><strong>Sara Raza</strong><span>Marathon Runner, Islamabad</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★☆</div>
+          <p>"Great product and fast shipping. The chocolate whey flavor is 🔥. Will definitely order again."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">UF</div>
+            <div><strong>Usman Farooq</strong><span>CrossFit Enthusiast, Karachi</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="nav__logo">
+          <div class="logo-icon">🥜</div>
+          <span class="logo-text">Protein<span class="logo-accent">Hub</span></span>
+        </div>
+        <p>Pakistan's #1 high-protein peanut butter brand. Made for those who never stop pushing.</p>
+        <div class="footer__social">
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#">Classic Crunch</a></li>
+          <li><a href="#">Smooth Whey</a></li>
+          <li><a href="#">Chocolate Dream</a></li>
+          <li><a href="#">Gym Bundle</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Blue Area, Islamabad, Pakistan</p>
+        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+        <p><i class="fas fa-envelope"></i> hello@proteinhub.pk</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Protein Hub. All rights reserved. | Made with 💛 in Pakistan</p>
+    </div>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-sidebar__header">
+      <h3>Your Cart 🛒</h3>
+      <button id="closeCart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-sidebar__footer">
+      <div class="cart-total">Total: <strong id="cartTotal">Rs. 0</strong></div>
+      <a href="checkout.html" class="btn btn--primary" style="width:100%;text-align:center;">Checkout</a>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast"></div>
+
+  <script src="../js/products-data.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/home.js"></script>
+</body>
+</html>

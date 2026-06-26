@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – Protein Hub</title>
+  <link rel="stylesheet" href="../css/main.css"/>
+  <link rel="stylesheet" href="../css/contact.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="../index.html" class="nav__logo" style="text-decoration:none">
+        <div class="logo-icon">🥜</div>
+        <span class="logo-text">Protein<span class="logo-accent">Hub</span></span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="../index.html" class="nav__link">Home</a></li>
+        <li><a href="../index.html#products" class="nav__link">Products</a></li>
+        <li><a href="contact.html" class="nav__link">Contact Us</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="login.html" class="btn btn--outline">Login</a>
+        <a href="signup.html" class="btn btn--primary">Sign Up</a>
+      </div>
+      <button class="nav__toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <h1>Contact <span class="highlight">Us</span></h1>
+    <p>Got a question? We'd love to hear from you. We'll get back within 24 hours.</p>
+  </div>
+
+  <!-- CONTACT MAIN -->
+  <section class="contact-main">
+    <div class="container contact-grid">
+
+      <!-- Info Cards -->
+      <div class="contact-info">
+        <h2 class="contact-info__title">Get In Touch</h2>
+        <p class="contact-info__desc">Whether you have a question about your order, our products, or just want to say hi — we're here for you.</p>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-card__icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Our Location</h4>
+              <p>Blue Area, Islamabad, Punjab, Pakistan</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>+92 300 1234567</p>
+              <small>Mon–Sat, 9am–6pm PST</small>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@proteinhub.pk</p>
+              <small>We reply within 24 hours</small>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>+92 300 1234567</p>
+              <small>Quick support via WhatsApp</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-social">
+          <h4>Follow Us</h4>
+          <div class="footer__social">
+            <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap">
+        <h2>Send Us a Message</h2>
+        <div id="contactSuccess" class="auth-alert auth-alert--success hidden">
+          ✅ Your message has been sent! We'll get back to you soon.
+        </div>
+        <form id="contactForm" novalidate>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="cName">Your Name *</label>
+              <input type="text" id="cName" class="form-control" placeholder="Ahmad Khan"/>
+              <span class="form-error" id="cNameError">Name is required.</span>
+            </div>
+            <div class="form-group">
+              <label for="cEmail">Email Address *</label>
+              <input type="email" id="cEmail" class="form-control" placeholder="you@example.com"/>
+              <span class="form-error" id="cEmailError">Valid email is required.</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cSubject">Subject *</label>
+            <select id="cSubject" class="form-control">
+              <option value="">Select a subject...</option>
+              <option value="order">Order Issue</option>
+              <option value="product">Product Question</option>
+              <option value="shipping">Shipping & Delivery</option>
+              <option value="return">Return / Refund</option>
+              <option value="wholesale">Wholesale Inquiry</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="form-error" id="cSubjectError">Please select a subject.</span>
+          </div>
+          <div class="form-group">
+            <label for="cMessage">Your Message *</label>
+            <textarea id="cMessage" class="form-control" rows="6" placeholder="Tell us how we can help..."></textarea>
+            <span class="form-error" id="cMessageError">Message is required (min 20 characters).</span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__bottom">
+      <p>© 2025 Protein Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="../js/contact.js"></script>
+</body>
+</html>
