@@ -1,172 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin Panel – Protein Hub</title>
-  <link rel="stylesheet" href="../css/main.css"/>
-  <link rel="stylesheet" href="../css/admin.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-</head>
-<body class="admin-body">
-
-  <!-- SIDEBAR -->
-  <aside class="admin-sidebar" id="adminSidebar">
-    <div class="admin-sidebar__logo">
-      <div class="logo-icon">🥜</div>
-      <span class="logo-text">Protein<span class="logo-accent">Hub</span></span>
-      <span class="admin-tag">Admin</span>
-    </div>
-    <nav class="admin-nav">
-      <a href="#" class="admin-nav__item active" data-tab="dashboard">
-        <i class="fas fa-chart-bar"></i> Dashboard
-      </a>
-      <a href="#" class="admin-nav__item" data-tab="products">
-        <i class="fas fa-box"></i> Products
-      </a>
-      <a href="#" class="admin-nav__item" data-tab="orders">
-        <i class="fas fa-shopping-bag"></i> Orders
-      </a>
-      <a href="#" class="admin-nav__item" data-tab="users">
-        <i class="fas fa-users"></i> Users
-      </a>
-      <a href="#" class="admin-nav__item" data-tab="messages">
-        <i class="fas fa-envelope"></i> Messages
-        <span class="nav-badge" id="msgBadge">0</span>
-      </a>
-    </nav>
-    <div class="admin-sidebar__footer">
-      <a href="../index.html" class="btn btn--outline btn--sm" style="width:100%;justify-content:center;">
-        <i class="fas fa-arrow-left"></i> Back to Site
-      </a>
-      <button onclick="adminLogout()" class="btn btn--danger btn--sm" style="width:100%;justify-content:center;margin-top:10px">
-        <i class="fas fa-sign-out-alt"></i> Logout
-      </button>
-    </div>
-  </aside>
-
-  <!-- MAIN CONTENT -->
-  <div class="admin-content">
-    <!-- Top Bar -->
-    <header class="admin-topbar">
-      <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
-      <div class="admin-topbar__title" id="pageTitle">Dashboard</div>
-      <div class="admin-topbar__user">
-        <div class="topbar-avatar">A</div>
-        <span id="adminName">Admin</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel – Protein Hub</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="admin-body">
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="admin-sidebar__logo">
+        <div class="logo-icon">🥜</div>
+        <span class="logo-text"
+          >Protein<span class="logo-accent">Hub</span></span
+        >
+        <span class="admin-tag">Admin</span>
       </div>
-    </header>
+      <nav class="admin-nav">
+        <a href="#" class="admin-nav__item active" data-tab="dashboard">
+          <i class="fas fa-chart-bar"></i> Dashboard
+        </a>
+        <a href="#" class="admin-nav__item" data-tab="products">
+          <i class="fas fa-box"></i> Products
+        </a>
+        <a href="#" class="admin-nav__item" data-tab="orders">
+          <i class="fas fa-shopping-bag"></i> Orders
+        </a>
+        <a href="#" class="admin-nav__item" data-tab="users">
+          <i class="fas fa-users"></i> Users
+        </a>
+        <a href="#" class="admin-nav__item" data-tab="messages">
+          <i class="fas fa-envelope"></i> Messages
+          <span class="nav-badge" id="msgBadge">0</span>
+        </a>
+      </nav>
+      <div class="admin-sidebar__footer">
+        <a
+          href="../index.html"
+          class="btn btn--outline btn--sm"
+          style="width: 100%; justify-content: center"
+        >
+          <i class="fas fa-arrow-left"></i> Back to Site
+        </a>
+        <button
+          onclick="adminLogout()"
+          class="btn btn--danger btn--sm"
+          style="width: 100%; justify-content: center; margin-top: 10px"
+        >
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+    </aside>
 
-    <!-- TAB CONTENT -->
-    <main class="admin-main" id="adminMain">
-      <!-- Filled by JS -->
-    </main>
-  </div>
+    <!-- MAIN CONTENT -->
+    <div class="admin-content">
+      <!-- Top Bar -->
+      <header class="admin-topbar">
+        <button class="sidebar-toggle" id="sidebarToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="admin-topbar__title" id="pageTitle">Dashboard</div>
+        <div class="admin-topbar__user">
+          <div class="topbar-avatar">A</div>
+          <span id="adminName">Admin</span>
+        </div>
+      </header>
 
-  <!-- MODALS -->
-  <div class="modal-overlay" id="modalOverlay"></div>
-  <div class="modal" id="productModal">
-    <div class="modal__header">
-      <h3 id="modalTitle">Add New Product</h3>
-      <button onclick="closeModal()"><i class="fas fa-times"></i></button>
+      <!-- TAB CONTENT -->
+      <main class="admin-main" id="adminMain">
+        <!-- Filled by JS -->
+      </main>
     </div>
-    <div class="modal__body">
-      <form id="productForm">
-        <div class="form-row-2">
-          <div class="form-group">
-            <label>Product Name *</label>
-            <input type="text" id="pName" class="form-control" placeholder="e.g. Classic Crunch" required/>
-          </div>
-          <div class="form-group">
-            <label>Emoji *</label>
-            <input type="text" id="pEmoji" class="form-control" placeholder="🥜" required/>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Tagline *</label>
-          <input type="text" id="pTagline" class="form-control" placeholder="Short catchy description"/>
-        </div>
-        <div class="form-group">
-          <label>Full Description *</label>
-          <textarea id="pDesc" class="form-control" rows="4" placeholder="Full product description..."></textarea>
-        </div>
-        <div class="form-row-2">
-          <div class="form-group">
-            <label>Price (Rs.) *</label>
-            <input type="number" id="pPrice" class="form-control" placeholder="1299" required/>
-          </div>
-          <div class="form-group">
-            <label>Old Price (Rs.)</label>
-            <input type="number" id="pOldPrice" class="form-control" placeholder="Optional"/>
-          </div>
-        </div>
-        <div class="form-row-2">
-          <div class="form-group">
-            <label>Category *</label>
-            <select id="pCategory" class="form-control">
-              <option value="classic">Classic</option>
-              <option value="whey">With Whey</option>
-              <option value="flavoured">Flavoured</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Weight</label>
-            <input type="text" id="pWeight" class="form-control" placeholder="500g"/>
-          </div>
-        </div>
-        <div class="form-row-3">
-          <div class="form-group">
-            <label>Protein</label>
-            <input type="text" id="pProtein" class="form-control" placeholder="28g"/>
-          </div>
-          <div class="form-group">
-            <label>Calories</label>
-            <input type="text" id="pCalories" class="form-control" placeholder="190 kcal"/>
-          </div>
-          <div class="form-group">
-            <label>Stock</label>
-            <input type="number" id="pStock" class="form-control" placeholder="50"/>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Badge Label</label>
-          <input type="text" id="pBadge" class="form-control" placeholder="e.g. New, Hot, Bestseller (optional)"/>
-        </div>
-        <div class="form-group">
-          <label>Features (comma-separated)</label>
-          <input type="text" id="pFeatures" class="form-control" placeholder="High Protein, No Sugar, Vegan"/>
-        </div>
-        <div class="form-group">
-          <label>Ingredients</label>
-          <input type="text" id="pIngredients" class="form-control" placeholder="Dry-Roasted Peanuts (100%)"/>
-        </div>
-      </form>
-    </div>
-    <div class="modal__footer">
-      <button class="btn btn--outline" onclick="closeModal()">Cancel</button>
-      <button class="btn btn--primary" id="saveProductBtn" onclick="saveProduct()">Save Product</button>
-    </div>
-  </div>
 
-  <!-- Delete Confirm -->
-  <div class="modal modal--sm" id="deleteModal">
-    <div class="modal__header">
-      <h3>Confirm Delete</h3>
-      <button onclick="closeDeleteModal()"><i class="fas fa-times"></i></button>
+    <!-- MODALS -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal" id="productModal">
+      <div class="modal__header">
+        <h3 id="modalTitle">Add New Product</h3>
+        <button onclick="closeModal()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal__body">
+        <form id="productForm">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Product Name *</label>
+              <input
+                type="text"
+                id="pName"
+                class="form-control"
+                placeholder="e.g. Classic Crunch"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Emoji *</label>
+              <input
+                type="text"
+                id="pEmoji"
+                class="form-control"
+                placeholder="🥜"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Tagline *</label>
+            <input
+              type="text"
+              id="pTagline"
+              class="form-control"
+              placeholder="Short catchy description"
+            />
+          </div>
+          <div class="form-group">
+            <label>Full Description *</label>
+            <textarea
+              id="pDesc"
+              class="form-control"
+              rows="4"
+              placeholder="Full product description..."
+            ></textarea>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Price (Rs.) *</label>
+              <input
+                type="number"
+                id="pPrice"
+                class="form-control"
+                placeholder="1299"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Old Price (Rs.)</label>
+              <input
+                type="number"
+                id="pOldPrice"
+                class="form-control"
+                placeholder="Optional"
+              />
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Category *</label>
+              <select id="pCategory" class="form-control">
+                <option value="classic">Classic</option>
+                <option value="whey">With Whey</option>
+                <option value="flavoured">Flavoured</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Weight</label>
+              <input
+                type="text"
+                id="pWeight"
+                class="form-control"
+                placeholder="500g"
+              />
+            </div>
+          </div>
+          <div class="form-row-3">
+            <div class="form-group">
+              <label>Protein</label>
+              <input
+                type="text"
+                id="pProtein"
+                class="form-control"
+                placeholder="28g"
+              />
+            </div>
+            <div class="form-group">
+              <label>Calories</label>
+              <input
+                type="text"
+                id="pCalories"
+                class="form-control"
+                placeholder="190 kcal"
+              />
+            </div>
+            <div class="form-group">
+              <label>Stock</label>
+              <input
+                type="number"
+                id="pStock"
+                class="form-control"
+                placeholder="50"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Badge Label</label>
+            <input
+              type="text"
+              id="pBadge"
+              class="form-control"
+              placeholder="e.g. New, Hot, Bestseller (optional)"
+            />
+          </div>
+          <div class="form-group">
+            <label>Features (comma-separated)</label>
+            <input
+              type="text"
+              id="pFeatures"
+              class="form-control"
+              placeholder="High Protein, No Sugar, Vegan"
+            />
+          </div>
+          <div class="form-group">
+            <label>Ingredients</label>
+            <input
+              type="text"
+              id="pIngredients"
+              class="form-control"
+              placeholder="Dry-Roasted Peanuts (100%)"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn--outline" onclick="closeModal()">Cancel</button>
+        <button
+          class="btn btn--primary"
+          id="saveProductBtn"
+          onclick="saveProduct()"
+        >
+          Save Product
+        </button>
+      </div>
     </div>
-    <div class="modal__body">
-      <p>Are you sure you want to delete <strong id="deleteProductName"></strong>? This cannot be undone.</p>
-    </div>
-    <div class="modal__footer">
-      <button class="btn btn--outline" onclick="closeDeleteModal()">Cancel</button>
-      <button class="btn btn--danger" onclick="confirmDelete()">Delete</button>
-    </div>
-  </div>
 
-  <div class="toast" id="toast"></div>
+    <!-- Delete Confirm -->
+    <div class="modal modal--sm" id="deleteModal">
+      <div class="modal__header">
+        <h3>Confirm Delete</h3>
+        <button onclick="closeDeleteModal()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal__body">
+        <p>
+          Are you sure you want to delete
+          <strong id="deleteProductName"></strong>? This cannot be undone.
+        </p>
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn--outline" onclick="closeDeleteModal()">
+          Cancel
+        </button>
+        <button class="btn btn--danger" onclick="confirmDelete()">
+          Delete
+        </button>
+      </div>
+    </div>
 
-  <script src="../js/products-data.js"></script>
-  <script src="../js/admin.js"></script>
-</body>
+    <div class="toast" id="toast"></div>
+
+    <script src="../js/products-data.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
 </html>
