@@ -20,5 +20,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node frontend/server.js"
+  },
+  "devDependencies": {
+    "prettier": "3.9.4"
   }
 }

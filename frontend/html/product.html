@@ -1,66 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Product Detail – Protein Hub</title>
-  <link rel="stylesheet" href="../css/main.css"/>
-  <link rel="stylesheet" href="../css/product.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-</head>
-<body>
-
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="../index.html" class="nav__logo" style="text-decoration:none">
-        <div class="logo-icon">🥜</div>
-        <span class="logo-text">Protein<span class="logo-accent">Hub</span></span>
-      </a>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="../index.html" class="nav__link">Home</a></li>
-        <li><a href="../index.html#products" class="nav__link">Products</a></li>
-        <li><a href="contact.html" class="nav__link">Contact</a></li>
-      </ul>
-      <div class="nav__actions">
-        <a href="login.html" class="btn btn--outline">Login</a>
-        <a href="signup.html" class="btn btn--primary">Sign Up</a>
-        <div class="cart-icon" id="cartIcon">
-          <i class="fas fa-shopping-cart"></i>
-          <span class="cart-badge" id="cartBadge">0</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail – Protein Hub</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="../index.html" class="nav__logo" style="text-decoration: none">
+          <div class="logo-icon">🥜</div>
+          <span class="logo-text"
+            >Protein<span class="logo-accent">Hub</span></span
+          >
+        </a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="../index.html" class="nav__link">Home</a></li>
+          <li>
+            <a href="../index.html#products" class="nav__link">Products</a>
+          </li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a href="login.html" class="btn btn--outline">Login</a>
+          <a href="signup.html" class="btn btn--primary">Sign Up</a>
+          <div class="cart-icon" id="cartIcon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cartBadge">0</span>
+          </div>
         </div>
+        <button class="nav__toggle" id="navToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main id="productMain">
+      <!-- Filled by JS -->
+    </main>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-sidebar__header">
+        <h3>Your Cart 🛒</h3>
+        <button id="closeCart"><i class="fas fa-times"></i></button>
       </div>
-      <button class="nav__toggle" id="navToggle"><i class="fas fa-bars"></i></button>
-    </nav>
-  </header>
-
-  <main id="productMain">
-    <!-- Filled by JS -->
-  </main>
-
-  <div class="cart-overlay" id="cartOverlay"></div>
-  <div class="cart-sidebar" id="cartSidebar">
-    <div class="cart-sidebar__header">
-      <h3>Your Cart 🛒</h3>
-      <button id="closeCart"><i class="fas fa-times"></i></button>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-sidebar__footer">
+        <div class="cart-total">
+          Total: <strong id="cartTotal">Rs. 0</strong>
+        </div>
+        <a
+          href="checkout.html"
+          class="btn btn--primary"
+          style="width: 100%; text-align: center"
+          >Checkout</a
+        >
+      </div>
     </div>
-    <div class="cart-items" id="cartItems"></div>
-    <div class="cart-sidebar__footer">
-      <div class="cart-total">Total: <strong id="cartTotal">Rs. 0</strong></div>
-      <a href="checkout.html" class="btn btn--primary" style="width:100%;text-align:center;">Checkout</a>
-    </div>
-  </div>
 
-  <div class="toast" id="toast"></div>
+    <div class="toast" id="toast"></div>
 
-  <footer class="footer">
-    <div class="footer__bottom">
-      <p>© 2025 Protein Hub. All rights reserved.</p>
-    </div>
-  </footer>
+    <footer class="footer">
+      <div class="footer__bottom">
+        <p>© 2025 Protein Hub. All rights reserved.</p>
+      </div>
+    </footer>
 
-  <script src="../js/products-data.js"></script>
-  <script src="../js/cart.js"></script>
-  <script src="../js/product.js"></script>
-</body>
+    <script src="../js/products-data.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/product.js"></script>
+  </body>
 </html>
