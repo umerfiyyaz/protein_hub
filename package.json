@@ -1,0 +1,24 @@
+{
+  "name": "protein-hub",
+  "version": "1.0.0",
+  "description": "protein hub website",
+  "keywords": [
+    "protein",
+    "hub"
+  ],
+  "homepage": "https://github.com/umerfiyyaz/protein_hub#readme",
+  "bugs": {
+    "url": "https://github.com/umerfiyyaz/protein_hub/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umerfiyyaz/protein_hub.git"
+  },
+  "license": "ISC",
+  "author": "Umer fayyaz",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node frontend/server.js"
+  }
+}
