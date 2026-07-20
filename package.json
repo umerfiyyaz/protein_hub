@@ -1,0 +1,23 @@
+{
+  "name": "project-management",
+  "version": "1.0.0",
+  "description": "a project management application",
+  "keywords": [
+    "backend",
+    "project"
+  ],
+  "license": "ISC",
+  "author": "Umer fayyaz",
+  "type": "module",
+  "main": "index.js",
+  "types": "modules",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "devDependencies": {
+    "prettier": "3.9.4"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
